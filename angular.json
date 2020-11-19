@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "code-challenge-pokemon"
+    }
+  },
+  "defaultProject": "code-challenge-pokemon",
+  "cli": {
+    "analytics": false
+  }
 }
