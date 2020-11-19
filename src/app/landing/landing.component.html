@@ -1,0 +1,16 @@
+<section class="landing" *ngIf="!state.loader">
+  <div class="landing__wrapper">
+    <img src="./assets/img/pokemon.png" alt="pokemon-image" width="200px">
+    <p class="landing__title">Generation 1</p>
+    <p class="landing__subtitle"><span class="landing__subtitle--color">{{state.page && state.page.results.length}}</span> pockemon</p>
+  </div>
+  <ng-container *ngIf="state.page && state.page.results.length">
+    <app-results-list [results]="state.page.results"></app-results-list>
+  </ng-container>
+
+</section>
+ <ng-container *ngIf="state.loader">
+   <div style="display: flex; justify-content: center; align-items: center;height:100vh">
+     <app-loader [setSpinner]="state.loader" [message]="state.loaderMsg"></app-loader>
+   </div>
+  </ng-container>
