@@ -1,0 +1,25 @@
+.result-list-item {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  width: 17.625rem;
+  height: 9.375rem;
+  background-color: bisque;
+  &:hover {
+    background-color:#e5e5e5;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  &__txt {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%);
+  }
+}
