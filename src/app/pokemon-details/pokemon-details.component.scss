@@ -1,0 +1,55 @@
+.pokemon-details {
+  margin: 5rem auto 0 auto;
+  border: 1px solid black;
+  max-width: 18.75rem;
+  padding: 1rem;
+  font-weight: 500;
+  font-family: 'Roboto';
+  background-color: #e5e5e5;
+
+  &__header {
+   &--position {
+      position: relative;
+   }
+  }
+  &__close {
+    font-weight: 400 !important;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    font-weight: 700;
+    color: grey;
+    position: absolute;
+    right: 0;
+    font-size: 1.4rem;
+  }
+  &__sprite {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+  }
+  &__name {
+    text-align: center;
+    font-weight: 400 !important;
+  }
+
+  &__id {
+    color: grey;
+  }
+  &__type {
+    color: grey;
+    font-weight: 400 !important;
+  }
+  &__height {
+    color: grey;
+    font-weight: 400 !important;
+
+  }
+  &__abilities {
+    color: grey;
+    font-weight: 400 !important;
+
+  }
+}

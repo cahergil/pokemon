@@ -1,0 +1,28 @@
+<section class="pokemon-details" *ngIf="state.details">
+    <div class="pokemon-details__header">
+      <div class="pokemon-details__header--position">
+        <div class="pokemon-details__close" (click)="goToList()">x</div>
+        <img class="pokemon-details__sprite" [src]="state.details.sprites.front_default || state.details.sprites.back_default" alt="image" width="100px" height="100px"/>
+      </div>
+      <p class="pokemon-details__name">{{state.name}}</p>
+    </div>
+    <p>ID:<span class="pokemon-details__id">{{ state.details.id}}</span> </p>
+    <p>Type: </p>
+    <ul style="list-style-type:circle">
+      <li class="pokemon-details__type" *ngFor="let typeItem of state.details.types">
+        {{typeItem.type.name}}
+      </li>
+    </ul>
+    <p >Height: <span class="pokemon-details__height">{{state.details.height}}</span></p>
+    <p>Abilities:</p>
+    <ul style="list-style-type:circle">
+      <li class="pokemon-details__abilities" *ngFor="let abilityItem of state.details.abilities">
+        {{abilityItem.ability.name}}
+      </li>
+    </ul>
+ </section>
+ <ng-container *ngIf="!state.details">
+   <div style="display: flex; justify-content: center; align-items: flex-start">
+     <app-loader [setSpinner]="state.loader" [message]="state.loaderMsg"></app-loader>
+   </div>
+  </ng-container>
