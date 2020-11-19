@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ResponseItem } from 'src/app/models/responseItem';
 
 class Props {
-  results: ResponseItem[] = []
+  results: ResponseItem[] = [];
 }
 
 @Component({
@@ -18,6 +18,9 @@ export class ResultsListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.init();
+  }
+  init() {
     this.state.results = this.results.map((result) => {
       return {
         name: result.name,
