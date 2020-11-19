@@ -9,7 +9,7 @@ import { Page } from '../models/page';
 class Props {
   page: Page;
   loader: boolean = true;
-  loaderMsg: string = 'Loading...'
+  loaderMsg: string = 'Loading...';
 }
 
 @Component({
@@ -18,7 +18,7 @@ class Props {
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit {
-  state: Props = new Props()
+  state: Props = new Props();
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
@@ -26,9 +26,9 @@ export class LandingComponent implements OnInit {
   }
 
   init() {
-    this.apiService.getList().subscribe(resp => {
-      this.state.page = resp
+    this.apiService.getList().subscribe((resp) => {
+      this.state.page = resp;
       this.state.loader = false;
-    })
+    });
   }
 }
